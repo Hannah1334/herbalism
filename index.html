@@ -1,237 +1,684 @@
+<script>resizeTo(screen.availWidth, screen.availHeight);</script>
+
 <style>
 body{
-background-image: url('') !important; 
+background-image: url('https://i.imgur.com/wVsyM4g.png') !important; 
 background-repeat:no-repeat !important; 
-background-position:center !important; 
-background-size:cover;
-background-color:#000000;
+background-position:left !important; 
+background-size:contain;
+background-color:#E4D7BB;
 }
-::-webkit-scrollbar {width: 5px; height: 5px;}
+
+#bgpic {
+position:absolute;
+top:0%;
+width:50%;
+height:100%;
+left:50%;
+background-image: url('https://i.imgur.com/sIxfpKm.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:right !important; 
+background-size:contain;
+background-color:#E4D7BB;
+}
+
+::-webkit-scrollbar {width: 3px; height: 3px;}
 ::-webkit-scrollbar-track {background: none;}
-::-webkit-scrollbar-thumb {background: #f55182;}
-#line1 {
+::-webkit-scrollbar-thumb {background: #4E5227;}
+
+#bigtitle {
 position:absolute;
-top:70%;
-left:0%;
-width:100%;
-height:1%;
-background-color:#f2b1c9;
+width:30%;
+height:6%;
+top:5%;
+left:35%;
+color:#2D310C;
+text-transform:uppercase;
+font-size:4vh;
+font-family: 'Notable', sans-serif;
+letter-spacing:15px;
+text-align:center;
 }
-#line2 {
+
+#vine1 {
 position:absolute;
-top:0%;
-left:5%;
-width:3%;
-height:100%;
-background-color:#f2b1c9;
-}
-#line3 {
-position:absolute;
-top:0%;
-left:9%;
-width:0.5%;
-height:100%;
-background-color:#f2b1c9;
-}
-#picbox {
-position:absolute;
-top:0%;
-left:0%;
-width:40%;
-height:100%;
-background-image: url('http://i.imgur.com/MKfhEsV.png') !important; 
+height:6%;
+width:10%;
+top:5%;
+left:20%;
+background-image: url('https://i.imgur.com/iHOFdD4.png') !important; 
 background-repeat:no-repeat !important; 
-background-position:center !important; 
+background-position:left !important; 
 background-size:contain;
 }
+
+#vine2 {
+position:absolute;
+height:6%;
+width:10%;
+top:5%;
+left:70%;
+background-image: url('https://i.imgur.com/5LMX8Xi.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:right !important; 
+background-size:contain;
+}
+
+#line1 {
+position:absolute;
+border-bottom:2px dotted #3C3F22;
+width:60%;
+left:20%;
+top:13%;
+}
+
+#bigbox1 {
+position:absolute;
+padding:2%;
+border:1px solid #3C3F22;
+background-color:#EEE1C5;
+width:30%;
+height:67%;
+top:17%;
+left:20%;
+}
+
+#basicholder {
+position:absolute;
+padding:2%;
+border:1px solid #3C3F22;
+background-color:#EEE1C5;
+width:18.9%;
+height:20%;
+top:17%;
+left:57%;
+}
+
 #basics {
 position:absolute;
 padding:2%;
-width:25%;
+border:1px solid #3C3F22;
+width:89.3%;
+height:82%;
+top:5%;
+left:3%;
+}
+
+#basicpic {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+width:30%;
+height:69%;
+top:23%;
+background-image: url('https://i.imgur.com/LxIaOhN.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#basictext {
+position:absolute;
+width:60.8%;
+height:73%;
+top:23%;
+left:37%;
+color:#2D310C;
+font-size:1.4vh;
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#factholder {
+position:absolute;
+padding:2%;
+border:1px solid #3C3F22;
+background-color:#EEE1C5;
+width:18.9%;
 height:20%;
+top:50%;
+left:57%;
+}
+
+#facts {
+position:absolute;
+padding:2%;
+border:1px solid #3C3F22;
+width:89.3%;
+height:82%;
+top:5%;
+left:3%;
+color:#2D310C;
+font-size:1.5vh;
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#alliesholder {
+position:absolute;
+padding:2%;
+border:1px solid #3C3F22;
+background-color:#EEE1C5;
+width:18.9%;
+height:1%;
+top:83%;
+left:57%;
+}
+
+#allies {
+position:absolute;
+padding:2%;
+border:1px solid #3C3F22;
+width:89.3%;
+height:51%;
+top:13%;
+left:3%;
+font-family: 'Notable', sans-serif;
+line-height:0;
+text-transform:uppercase;
+color:#9DA271;
+text-align:center;
+font-size:1vh;
+letter-spacing:10px;
+}
+
+#ally1 {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+top:35%;
+left:11%;
+width:6.5%;
+height:40%;
+background-image: url('http://fp.chatango.com/profileimg/r/u/rune/thumb.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#ally2 {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+top:35%;
+left:21%;
+width:6.5%;
+height:40%;
+background-image: url('http://fp.chatango.com/profileimg/g/r/groove/thumb.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#ally3 {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+top:35%;
+left:30.7%;
+width:6.5%;
+height:40%;
+background-image: url('http://fp.chatango.com/profileimg/e/z/ezekielhazen/thumb.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#ally4 {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+top:35%;
+left:40.5%;
+width:6.5%;
+height:40%;
+background-image: url('http://fp.chatango.com/profileimg/b/u/bubble/thumb.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#ally5 {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+top:35%;
+left:50.2%;
+width:6.5%;
+height:40%;
+background-image: url('http://fp.chatango.com/profileimg/a/s/ashaire/thumb.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#ally6 {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+top:35%;
+left:60%;
+width:6.5%;
+height:40%;
+background-image: url('http://fp.chatango.com/profileimg/p/r/primum/thumb.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#ally7 {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+top:35%;
+left:69.8%;
+width:6.5%;
+height:40%;
+background-image: url('http://fp.chatango.com/profileimg/i/m/imgicon/thumb.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#ally8 {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+top:35%;
+left:79.8%;
+width:6.5%;
+height:40%;
+background-image: url('http://fp.chatango.com/profileimg/i/m/imgicon/thumb.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#ally1:hover,#ally2:hover,#ally3:hover,#ally4:hover,#ally5:hover,#ally6:hover,#ally7:hover,#ally8:hover {
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-o-transform: rotate(360deg) ;
+-ms-transform: rotate(360deg);
+transform: rotate(360deg) ;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabtitle {
+position:absolute;
+width:93.7%;
+height:7%;
+top:3%;
+left:3%;
+font-family: 'Playfair Display', serif;
+color:#9DA271;
+text-align:right;
+font-size:3.5vh;
+letter-spacing:10px;
+}
+
+#tabholder {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+border-left:none;
+border-right:none;
+width:93.7%;
+height:4%;
 top:10%;
-left:40%;
-color:#f55182;
-font-family:Economica;
-font-size:70%;
-background-color:#ffffff;
-border:1px solid #f2b1c9;
+left:3%;
 }
-#basics1 {
-position:absolute;
-width:45%;
-height:90%;
-left:5%;
-top:5%;
-color:#314a23;
-font-family:Economica;
-text-align:center;
-font-size:100%;
-}
-#basics2 {
-position:absolute;
-width:45%;
-height:90%;
-left:48%;
-top:5%;
-color:#314a23;
-font-family:Economica;
-text-align:center;
-font-size:100%;
-}
+
 #content {
 position:absolute;
 overflow:auto;
 padding:2%;
-width:25%;
-height:40%;
-top:40%;
-left:40%;
-color:#314a23;
-font-family:Economica;
-font-size:90%;
-background-color:#ffffff;
-border:1px solid #f2b1c9;
+border:1px solid #3C3F22;
+width:89.3%;
+height:74.5%;
+top:18%;
+left:3%;
+color:#2D310C;
+font-size:1.5vh;
+font-family: 'Open Sans Condensed', sans-serif;
 }
-#box1 {
-position:absolute;
-top:55%;
-left:72%;
-width:20%;
-height:28%;
-background-color:#f2b1c9;
+
+#pic1 {
+position:relative;
+background-color:#E4D7BB;
+width:46%;
+height:50%;
 }
-#wordbox {
+
+#bic1 {
 position:absolute;
-overflow:auto;
-padding:2%;
-top:9%;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+width:85.9%;
+height:86%;
+top:5%;
 left:5%;
-width:86%;
-height:78%;
-color:#f55182;
-font-family:Economica;
-font-size:90%;
-background-color:#ffffff;
 }
-#tabbox {
+
+#pic2 {
 position:absolute;
-top:83%;
-left:72.25%;
-width:20%;
-height:5%;
+background-color:#E4D7BB;
+width:46%;
+height:47.9%;
+left:51.9%;
+top:2.3%;
 }
+
+#bic2 {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+width:85.9%;
+height:86%;
+top:5%;
+left:5.5%;
+}
+
+#pic3 {
+position:relative;
+background-color:#E4D7BB;
+width:100%;
+height:60%;
+}
+
+#bic3 {
+position:absolute;
+border-width:4px;
+border-color:#4D5221;
+border-style:double;
+width:92%;
+height:86%;
+top:5%;
+left:3%;
+}
+
+#tabbox1 {
+position:absolute;
+height:100%;
+width:15%;
+top:0%;
+left:0%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2 {
+position:absolute;
+height:100%;
+width:15%;
+top:0%;
+left:17%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3 {
+position:absolute;
+height:100%;
+width:15%;
+top:0%;
+left:34%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4 {
+position:absolute;
+height:100%;
+width:15%;
+top:0%;
+left:51%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5 {
+position:absolute;
+height:100%;
+width:15%;
+top:0%;
+left:68%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox6 {
+position:absolute;
+height:100%;
+width:15%;
+top:0%;
+left:85%;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1:hover,#tabbox2:hover,#tabbox3:hover,#tabbox4:hover,#tabbox5:hover,#tabbox6:hover {
+background-color:#4D5221;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
 .tabs{
-display:inline-block;
-padding:2%;
-width:11%;
-height:80%;
-margin-left:2%;
-margin-right:1.5%;
+display:block;
+width:100%;
+height:100%;
 text-align:center;
-background-color:#f2b1c9;
-color: #ffffff;
-font-family:Economica;
-font-size:100%;
+color:#4D5221;
+font-family: 'Open Sans Condensed', sans-serif;
+text-transform:uppercase;
+font-size:2vh;
+line-height:1.5;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
 }
+
 .tabs:hover {
-height:120%;
-color:#f2b1c9;
+color:#9DA271;
 -webkit-transition: all 0.8s ease-out;
 -moz-transition: all 0.8s ease-out;
 transition: all 0.8s ease-out;
 }
-#tab1,#tab2,#tab3,#tab4,#tab5 {
+
+#tab1,#tab2,#tab3,#tab4,#tab5,#tab6,#tab7,#tab8,#tab9,#tab10,#tab11,#tab12 {
 display: none;
 }
+
 i {
-color:#f55182;
-font-size:100%;
+color:#666666;
 }
+
+a {
+color:#666666;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+a:hover {
+color:#9DA271;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
 h1 {
-background-color:#f55182;
-color: #ffffff;
-letter-spacing:3px;
-font-family: Teko;
+border-left:10px solid #4D5221;
+border-right:10px solid #4D5221;
+background-color:#2F3403;
+font-family: 'Playfair Display', serif;
+color:#9DA271;
 text-align:center;
-font-size: 90%;
+font-size:2vh;
 }
+
 b {
-font-size: 100%;
-color:#f55182;
-text-transform: uppercase;
-font-family:Teko;
-letter-spacing:3px;
+color:#9DA271;
+text-transform:uppercase;
 }
+
 </style>
 
-<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), progress !important;}</style>
-<link href="https://fonts.googleapis.com/css?family=Economica|Teko" rel="stylesheet">
+<style type="text/css">* {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur829.cur), auto !important;}</style>
+<link href="https://fonts.googleapis.com/css?family=Notable|Open+Sans+Condensed:300|Playfair+Display" rel="stylesheet">
 <script>function changeNavigation(id) {document.getElementById('content').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation1(id) {document.getElementById('tabtitle').innerHTML=document.getElementById(id).innerHTML}</script>
 
-<div id="line1">
-</div>
-<div id="line2">
-</div>
-<div id="line3">
-</div>
-<div id="picbox">
-</div>
+<div id="bgpic"></div>
 
-<div id="basics">
-<div id="basics1">
-<b>Name:</b><br>Jinny Grass<br>
-<b>Age:</b><br>Late Twenties/ Early Thirties<br>
-<b>Birthdate:</b><br>Unknown<br>
-<b>Gender:</b><br>Female<br>
-<b>Sexuality:</b><br>Demisexual
+<div id="vine1"></div>
+<div id="bigtitle">
+The Dryad
 </div>
-<div id="basics2">
-<b>Species:</b><br>Awakened Dryad<br>
-<b>Birth Plant:</b><br>Marijuana<br>
-<b>Occupation:</b><br>Student at <a target="_blank" href="http://ulreich.weebly.com">Ulreich University</a><br>
-<b>Height:</b><br>4'20" (5'8")<br>
-<b>Weight:</b><br>120 lbs.
+<div id="vine2"></div>
+<div id="line1"></div>
+
+<div id="bigbox1">
+<div id="tabtitle">
+Mind & Body
+</div>
+<div id="tabholder">
+<div id="tabbox1">
+<span class="tabs" onClick="changeNavigation ('tab1');changeNavigation1 ('tab2')">Details</span>
+</div>
+<div id="tabbox2">
+<span class="tabs" onClick="changeNavigation ('tab3');changeNavigation1 ('tab4')">Lore</span>
+</div>
+<div id="tabbox3">
+<span class="tabs" onClick="changeNavigation ('tab5');changeNavigation1 ('tab6')">Inventory</span>
+</div>
+<div id="tabbox4">
+<span class="tabs" onClick="changeNavigation ('tab7');changeNavigation1 ('tab8')">Racials</span>
+</div>
+<div id="tabbox5">
+<span class="tabs" onClick="changeNavigation ('tab9');changeNavigation1 ('tab10')">Aquamancy</span>
+</div>
+<div id="tabbox6">
+<span class="tabs" onClick="changeNavigation ('tab11');changeNavigation1 ('tab12')">Paganism</span>
 </div>
 </div>
 <div id="content">
-<h1>Basic Information</h1>
-<img align="right" style="height:90%;" src="http://i.imgur.com/a4NxsoZ.jpg"/>
-<b>Appearance</b><br>
+<div id="pic1"><div id="bic1"><img style="width:100%;height:100%;" src="https://i.imgur.com/rh1a8m2.jpg"/></div></div>
+<div id="pic2"><div id="bic2"><img style="width:100%;height:100%;" src="https://i.imgur.com/rTI9vwf.jpg"/></div></div>
+<h1>Appearance</h1>
 Interestingly enough about Jinny, other Forest Nymphs whose birth bodies are plants as small as her own end up having humanoid bodies much like dwarves. While she is short when compared to most adult humans, she's nowhere near toddler-to-young-child size, which has to do with the rare condition some plants acquire that allows them to reach beyond their own limitations. The combination of the strength of chemicals found in her plant, as well as its age and the intensity of mana attached to her allowed her to be somewhat average in height, size, and shape. She has a definite hourglass figure with a decent bust and rounded rear. Her face is narrow but fits wonderfully with the rest of her body in its size and shape. A long slender nose, thin smiling green lips, and narrow reddish pink eyes are framed by a head of dark green hair. Her whole body is colored much like her birth plant, her hair being the darkest shade of green. Her skin is a soft mint-green and some places on her flesh one can just barely make out the shape of her birth plant's leaves.
 <br><br>
-<b>Personality</b><br>
-For Forest Nymphs, their intentions, ambitions, and personalities will decide how they look. Thanks to her innocence and naive personality, Jinny is very vibrant and beautiful. She's a pretty chill person from the start, quick to call strangers her allies and just sort of goes with the flow. She's neither difficult or disagreeable, but can have violent moodswings if she feels threatened.
+<h1>Personality</h1>
+Once innocent and naive, now proud and headstrong. Jinny is still just as laid back, even lazier in a lot of ways than she was before. She rides through life with a chilled attitude, often seeming pacifistic in the way she lets things roll right off her back without much complaint. There are a few subjects she is rather passionate about that can be used to rile her up easily, but enemies are incredibly hard to come by. Always open to making friends, and a little too cocky about her magic prowess for her own good.
+</div>
 </div>
 
-<div id="box1">
-<div id="wordbox">
-<b>F u n // F a c t :</b><br>
+<div id="basicholder">
+<div id="basics">
+<h1>Basic Information</h1>
+<div id="basicpic"></div>
+<div id="basictext">
+<img align="right" style="width:20%;margin-top:16%;" src="https://i.imgur.com/MzGL861.png"/>
+<b>Name:</b> Jinny Grass<br>
+<b>Age:</b> Late Twenties/ Early Thirties<br>
+<b>Gender:</b> Female<br>
+<b>Sexuality:</b> Heterosexual<br>
+<b>Species:</b> Awakened Dryad<br>
+<b>Birth Plant:</b> Marijuana<br>
+<b>Occupation:</b> Student at <a target="_blank" href="http://ulreich.weebly.com">Ulreich University</a><br>
+<b>Height:</b> 4'20" (5'8")<br>
+<b>Weight:</b> 120 lbs.
+</div>
+</div>
+</div>
+<div id="factholder">
+<div id="facts">
+<h1>Fun Facts</h1>
 When "Forest Nymphs" push beyond the limitations of High Mage and embark on one of the rank paths, so long as one of their trees is Paganism the patron guardian of that tree--sometimes referred to as Mother Nature herself--blesses them and fully awakens their internal magic potential. Achieving this very rare and powerful feat no longer makes them "Forest Nymphs" but instead gives them the new title of an "Awakened Dryad." Jinny Grass is now one of these Dryads.
 </div>
 </div>
-<div id="tabbox">
-<span class="tabs" onClick="changeNavigation ('tab1')">1.</span>
-<span class="tabs" onClick="changeNavigation ('tab2')">2.</span>
-<span class="tabs" onClick="changeNavigation ('tab3')">3.</span>
-<span class="tabs" onClick="changeNavigation ('tab4')">4.</span>
-<span class="tabs" onClick="changeNavigation ('tab5')">5.</span>
+<div id="alliesholder">
+<div id="allies">
+.Esteemed Allies
+<a target="_blank" title="Rune" href="http://rune.chatango.com"><div id="ally1"></div></a>
+<a target="_blank" title="Apollo" href="http://groove.chatango.com"><div id="ally2"></div></a>
+<a target="_blank" title="Ezekiel" href="http://ezekielhazen.chatango.com"><div id="ally3"></div></a>
+<a target="_blank" title="Lynne" href="http://bubble.chatango.com"><div id="ally4"></div></a>
+<a target="_blank" title="Zinnia" href="http://ashaire.chatango.com"><div id="ally5"></div></a>
+<a target="_blank" title="Prophet Ambrose" href="http://primum.chatango.com"><div id="ally6"></div></a>
+<div id="ally7"></div>
+<div id="ally8"></div>
+</div>
 </div>
 
 <div id="tab1">
-<h1>History and Lore</h1>
-<img align="right" style="height:90%;" src="http://i.imgur.com/tKgSebv.png"/>
+<div id="pic1"><div id="bic1"><img style="width:100%;height:100%;" src="https://i.imgur.com/rh1a8m2.jpg"/></div></div>
+<div id="pic2"><div id="bic2"><img style="width:100%;height:100%;" src="https://i.imgur.com/rTI9vwf.jpg"/></div></div>
+<h1>Appearance</h1>
+Interestingly enough about Jinny, other Forest Nymphs whose birth bodies are plants as small as her own end up having humanoid bodies much like dwarves. While she is short when compared to most adult humans, she's nowhere near toddler-to-young-child size, which has to do with the rare condition some plants acquire that allows them to reach beyond their own limitations. The combination of the strength of chemicals found in her plant, as well as its age and the intensity of mana attached to her allowed her to be somewhat average in height, size, and shape. She has a definite hourglass figure with a decent bust and rounded rear. Her face is narrow but fits wonderfully with the rest of her body in its size and shape. A long slender nose, thin smiling green lips, and narrow reddish pink eyes are framed by a head of dark green hair. Her whole body is colored much like her birth plant, her hair being the darkest shade of green. Her skin is a soft mint-green and some places on her flesh one can just barely make out the shape of her birth plant's leaves.
+<br><br>
+<h1>Personality</h1>
+Once innocent and naive, now proud and headstrong. Jinny is still just as laid back, even lazier in a lot of ways than she was before. She rides through life with a chilled attitude, often seeming pacifistic in the way she lets things roll right off her back without much complaint. There are a few subjects she is rather passionate about that can be used to rile her up easily, but enemies are incredibly hard to come by. Always open to making friends, and a little too cocky about her magic prowess for her own good.
+</div>
+<div id="tab2">
+Mind & Body
+</div>
+
+<div id="tab3">
+<div id="pic3"><div id="bic3"><img style="width:100%;height:100%;" src="https://i.imgur.com/dydOIMm.png"/></div></div>
+<h1>Birth of the Marijuana Nymph</h1>
 All this, everything you're about to discover, was all started by mana. Mana is a life force that inhabits everything whether sentient or not. Even mana itself is somewhat sentient, imbued with intent so strong that some scholars believe that if enough mana gathered in one place at one time, it would give something inanimate complete consciousness and life. 
 <br><br>
 Actually, this occurance did happen, deep in the forests of medieval Europe. Finally it was common knowledge to the human race that magic was at everyone's fingertips. Magic flourished and the presence of mana became stronger and stronger until thick mystical fogs surrounded every tree. As time passed, mana embedded itself into each tree and foliage, each plant began growing its own sense of self awareness. 
 <br><br>
-A strong man who called himself Willow came from one of the forests with skin as rough as bark and hair as green as leaves. He claimed he'd spent hundreds of years watching life as a tree and had such a yearning to experience life like the lucky mobile creatures got to, until his wish became so strong that he just stepped right out of the tree! Of course at first Willow was celebrated, a new magical creature full of wisdom for them to learn from! Unfortunately, those with false power--the power of wealth--soon felt threatened. In their paranoia they feared that an army of these creatures would emerge and their authority and fame would fade into nothing. In an attempt of self preservation they spread lies, declaring that Willow was a dangerous creature and only agreed to be friendly to the humans in order to destroy them from the inside out. Terrified, the humans quickly turned on the newborn Nymph, and they burned him at the stake. 
+A strong man who called himself Willow came from one of the forests with skin as rough as bark and hair as green as leaves. He claimed he'd spent hundreds of years watching life as a tree and had such a yearning to experience life like the lucky mobile creatures got to, until his wish became so strong that he just stepped right out of the tree! Of course at first Willow was celebrated, a new magical creature full of wisdom for them to learn from! 
+<br>
+Unfortunately, those with false power--the power of wealth--soon felt threatened. In their paranoia they feared that an army of these creatures would emerge and their authority and fame would fade into nothing. In an attempt of self preservation they spread lies, declaring that Willow was a dangerous creature and only agreed to be friendly to the humans in order to destroy them from the inside out. Terrified, the humans quickly turned on the newborn Nymph, and they burned him at the stake. 
 <br><br>
 Years passed and this continued to happen all over the Earth. Earth Nymphs would be born, only to be viciously hunted and destroyed. Eventually even magic itself was an enemy of human control. Religions turned against any magical creature, calling their existence a blasphemy and sin against their gods until the Earth Nymphs learned that having a mobile body meant living in fear. 
-<br><br>
+<br>
 Centuries upon centuries passed with silence. Less and less Earth Nymphs were born until eventually the whole world just seemed to forget they existed. At least, until Grass was born. 
 <br><br>
 Grass was a strong Marijuana plant that had been growing for a long time without being discovered or torn down by natural elements. Of course, Grass knew a lot about human culture. It'd watched hundreds of hikers, campers, and evil-doers traverse through its forest right below its own perch. It'd heard all the conversations, all the musics, all the life, and wanted a taste of this life for itself. Its desire to live mobile was so strong that, just like Willow all those years ago, Grass' leaves pulled back and out stepped a young woman with red eyes so wide, innocent, and full of excitement. 
@@ -240,7 +687,42 @@ It took her a long time to find human civilization, which was perhaps a good thi
 <br><br>
 Grass became Jinny Grass, and she certainly studied well, because no matter where she went, she made a lot of human friends and allies. It probably had something to do with the fact that she was literally a magic Marijuana spirit, but who knows?!
 </div>
-<div id="tab2">
+<div id="tab4">
+History & Lore
+</div>
+
+<div id="tab5">
+<div id="pic3"><div id="bic3"><img style="width:100%;height:100%;" src="https://i.imgur.com/EGYrU1U.jpg"/></div></div>
+<h1>Items</h1>
+<b>Back-Sack</b><br>
+Currently the only item in her possession other than the clothes on her back and a few spare outfits in the front pocket. Just a bookbag that ranges on the larger side, faded brown in color. It mostly carries lots of leaves, stalks, and "bushes." 
+<br><br>
+<h1>Weapons</h1>
+<b>Knife</b><br>
+A simple hunting knife, the blade made of steel and seven inches in length, the hilt crafted from wood and covered in leather strips to make gripping easier. 
+<br><br>
+<h1>High Duomancer Medium (Aquamancy)</h1>
+<b>Right Arm of Lakshmi</b><br>
+A second right arm has mutated on the Dryad's side, a good four inches below the shoulder of the first. It is the same in size and proportion, although unlike her original arm this mutated Duomancer aspect can retract into her body to remain dormant, unused, and unseen without the right kind of sensory (things like x-ray that can see through flesh, because just looking for a mana reading won't show much based on the situation/context). Another difference between her normal left arm and this one in particular, is that while her general skin is made from a material as durable as steel, this entire limb is coated in diamond grade "plant fibers." They retain the same exact appearance, but one is simply far more durable than the other. 
+<br>
+This growth is named for the Hindu deity who supposedly is the goddess of wealth and prosperity, whom the Dryad will claim to have honored her with the extra limb when returning to India to set up her own "drug empire." 
+When casting Aquamancy spells from this limb, if they possess some sort of limited/specified rotation duration it gains a possible boost of up to two additional rotations (this only pertains to spells she has currently--High Duomancer spells included--things pitched in the future will have to specifically mention being effected at all by this passive and will cost extra points to be accessible by this Medium's abilities). This is not this Epic Medium's only ability, however, it also has a very useful trait to be utilized in exchange for specific activation with extra mana. When liquids are controlled or formed via Aquamancy spells through this particular limb, it is possible for the Medium to magically superheat the liquid (without the liquid catching fire) into a state that allows it to melt through--or cause damage to--things of equal rank to the particular spell. (For example, if it's a Mage spell, the liquid will only be superheated to possibly melt through iron, but if it's a High Duomancer spell it will be superheated to melt through diamond.) 
+This action allows a magical resistance to the liquid being evaporated, and while it's still most certainly possible, the process is considerably slower. 
+<br><br>
+<h1>High Duomancer Medium (Paganism)</h1>
+<b>Left Arm of Vishnu</b><br>
+A second left arm has mutated on the Dryad's side, a good four inches below the shoulder of the first. It is the same in size and proportion, although unlike her original arm this mutated Duomancer aspect can retract into her body to remain dormant, unused, and unseen without the right kind of sensory (things like x-ray that can see through flesh, because just looking for a mana reading won't show much based on the situation/context). Another difference between her normal left arm and this one in particular, is that while her general skin is made from a material as durable as steel, this entire limb is coated in diamond grade "plant fibers." They retain the same exact appearance, but one is simply far more durable than the other. 
+<br>
+This growth is named for the Hindu deity who supposedly is the preserver and protector of life, an ironic fit for her own role as a Dryad. 
+<br>
+When casting Paganism spells from this limb, if they possess some sort of range (whether this range pertains to "Area of Effect," how long something is or can stretch, or even if the range refers to how far away from her the said spell can be active) it gains a possible boost of up to five whole feet (this only pertains to spells she has currently--High Duomancer spells included--things pitched in the future will have to specifically mention being effected at all by this passive and will cost extra points to be accessible by this Medium's abilities). This is not this Epic Medium's only ability, however, it also has a very useful trait to be utilized in exchange for specific activation with extra mana. It allows Jinny to combine aspects of two separate Paganism spells (again, only the ones in her possession at the time of the Medium's approval, High Duomancer spells included) into one. One of the spells she wishes to combine must already be activated, and she must actively choose to cast the second spell "over" or "onto" the first, technically requiring both to be activated separately for a combined result (will always require at least two rotations for completion, on top of the activation rotation requirement some of her spells may already have).
+</div>
+<div id="tab6">
+Tools & Trinkets
+</div>
+
+<div id="tab7">
+<div id="pic3"><div id="bic3"><img style="width:100%;height:100%;" src="https://i.imgur.com/DMRvYAI.png"/></div></div>
 <h1>Racial Abilities of a Forest Nymph</h1>
 <b>Stinky Pores</b><br>
 When Jinny's body temperature rises, rather than sweat her pores release small doses of THC into the air. 
@@ -285,38 +767,15 @@ Every year on April 20th, at 4:20 PM, Jinny is completely OP invincible for a wh
 <h1>Mana Manipulation</h1>
 <i>"The most basic class of magic, involving the direct manipulation of Mana, is available to all mages. Raw Mana is a mundane source of magic with no special qualities, but offers some level of versatility. The amount of Mana a mage is capable of replenishing or expelling is dependent on their overall level." </i>
 <br><br>
-Jinny has learned every Universal Spell currently available to all students at Ulreich University. To see the descriptions, limitations, and general information regarding each of these spells click <a target="_blank" href="http://ulreich.weebly.com/terms--keywords--universal-spells.html">THIS LINK.</a>
+Jinny has learned every Universal Spell (save for one) currently available to all students at Ulreich University. To see the descriptions, limitations, and general information regarding each of these spells click <a target="_blank" href="https://tyler-fowlow96.wixsite.com/spellbook">THIS LINK.</a>
 </div>
-<div id="tab3">
-<h1>Items</h1>
-<b>Back-Sack</b><br>
-Currently the only item in her possession other than the clothes on her back and a few spare outfits in the front pocket. Just a bookbag that ranges on the larger side, faded brown in color. It mostly carries lots of leaves, stalks, and "bushes."
-<br><br>
-<h1>Weapons</h1>
-<b>Knife</b><br>
-A simple hunting knife, the blade made of steel and seven inches in length, the hilt crafted from wood and covered in leather strips to make gripping easier.
-<br><br>
-<h1>High Duomancer Medium (Aquamancy)</h1>
-<b>Right Arm of Lakshmi</b><br>
-A second right arm has mutated on the Dryad's side, a good four inches below the shoulder of the first. It is the same in size and proportion, although unlike her original arm this mutated Duomancer aspect can retract into her body to remain dormant, unused, and unseen without the right kind of sensory (things like x-ray that can see through flesh, because just looking for a mana reading won't show much based on the situation/context). Another difference between her normal left arm and this one in particular, is that while her general skin is made from a material as durable as steel, this entire limb is coated in diamond grade "plant fibers." They retain the same exact appearance, but one is simply far more durable than the other.
-<br>
-This growth is named for the Hindu deity who supposedly is the goddess of wealth and prosperity, whom the Dryad will claim to have honored her with the extra limb when returning to India to set up her own "drug empire."
-<br>
-When casting Aquamancy spells from this limb, if they possess some sort of limited/specified rotation duration it gains a possible boost of up to two additional rotations (this only pertains to spells she has currently--High Duomancer spells included--things pitched in the future will have to specifically mention being effected at all by this passive and will cost extra points to be accessible by this Medium's abilities). This is not this Epic Medium's only ability, however, it also has a very useful trait to be utilized in exchange for specific activation with extra mana. When liquids are controlled or formed via Aquamancy spells through this particular limb, it is possible for the Medium to magically superheat the liquid (without the liquid catching fire) into a state that allows it to melt through--or cause damage to--things of equal rank to the particular spell. (For example, if it's a Mage spell, the liquid will only be superheated to possibly melt through iron, but if it's a High Duomancer spell it will be superheated to melt through diamond.)
-<br>
-This action allows a magical resistance to the liquid being evaporated, and while it's still most certainly possible, the process is considerably slower.
-<br><br>
-<h1>High Duomancer Medium (Paganism)</h1>
-<b>Left Arm of Vishnu</b><br>
-A second left arm has mutated on the Dryad's side, a good four inches below the shoulder of the first. It is the same in size and proportion, although unlike her original arm this mutated Duomancer aspect can retract into her body to remain dormant, unused, and unseen without the right kind of sensory (things like x-ray that can see through flesh, because just looking for a mana reading won't show much based on the situation/context). Another difference between her normal left arm and this one in particular, is that while her general skin is made from a material as durable as steel, this entire limb is coated in diamond grade "plant fibers." They retain the same exact appearance, but one is simply far more durable than the other.
-<br>
-This growth is named for the Hindu deity who supposedly is the preserver and protector of life, an ironic fit for her own role as a Dryad.
-<br>
-When casting Paganism spells from this limb, if they possess some sort of range (whether this range pertains to "Area of Effect," how long something is or can stretch, or even if the range refers to how far away from her the said spell can be active) it gains a possible boost of up to five whole feet (this only pertains to spells she has currently--High Duomancer spells included--things pitched in the future will have to specifically mention being effected at all by this passive and will cost extra points to be accessible by this Medium's abilities). This is not this Epic Medium's only ability, however, it also has a very useful trait to be utilized in exchange for specific activation with extra mana. It allows Jinny to combine aspects of two separate Paganism spells (again, only the ones in her possession at the time of the Medium's approval, High Duomancer spells included) into one. One of the spells she wishes to combine must already be activated, and she must actively choose to cast the second spell "over" or "onto" the first, technically requiring both to be activated separately for a combined result (will always require at least two rotations for completion, on top of the activation rotation requirement some of her spells may already have). 
+<div id="tab8">
+Awakened Dryad
 </div>
-<div id="tab4">
+
+<div id="tab9">
+<div id="pic3"><div id="bic3"><img style="width:100%;height:100%;" src="https://i.imgur.com/335DuZ1.png"/></div></div>
 <h1>Elementalism: Aquamancy, High Duomancer</h1>
-<img align="left" style="height:90%;" src="http://i.imgur.com/S35cc8e.jpg"/>
 <i>"Often seen as the most primal or basic form of magic, Elementalists tap into one of six different elements to produce their magic. Each possesses a different mana type, and may use their spells to generate their chosen element. Aquamancy is the control of water and other liquids." </i>
 <br><br>
 <b>Liquidity</b><br>
@@ -344,9 +803,14 @@ The caster emits a thick cloud of warm steam from their body, which isn't intend
 <br>
 This steam can only stretch out for up to fifty feet in every direction away from the caster (first post it starts at fifteen feet, second post is thirty, then third is fifty), and can easily be blown away by spells of at least post high mage rank path level one (lower ranked spells can also blow it away, it would just require more than one rotation depending on rank, i.e.: High Mage would require two rotations, Expert would require three, etc). "Control" over bloodflow can only be harnassed on up to three victims at once. After five rotations, the mist will dissipate, and four rotations of cooldown will be required before it can be cast again.
 </div>
-<div id="tab5">
+<div id="tab10">
+Primary Magic Tree
+</div>
+
+<div id="tab11">
+<div id="pic1"><div id="bic1"><img style="width:100%;height:100%;" src="https://i.imgur.com/9oyEYqa.png"/></div></div>
+<div id="pic2"><div id="bic2"><img style="width:100%;height:100%;" src="https://i.imgur.com/MG3QRQX.png"/></div></div>
 <h1>Paganism, High Duomancer</h1>
-<img align="left" style="height:70%;" src="http://i.imgur.com/3OqFdpX.jpg"/>
 <i>"The Pagans are mages who wield the destructive forces of nature. A Pagan may begin with simple abilities, such as talking to animals, making plants grow, or making small rain clouds. However, as these mages practice and hone their craft, powerful storms will accumulate at their command, and charging beasts will follow their every word. Such mages even possess the ability to cultivate and assault others with deadly diseases and viruses, and can create natural disasters after attaining highly skilled control with their magic. " </i>
 <br><br>
 <b>Steroids!</b><br>
@@ -372,7 +836,6 @@ A spell that can grow up to eight long vine tendrils with sharp tips from the ca
 <b>Deep Root</b><br>
 When in contact with a solid surface that is populated (or covered) by natural flora and fauna (including those of her own magical creation but excluding magically created anomalies, artificial intelligence, etc made by other mages or crafted by mundane hands) she can pump that surface full of her mana and in exchange close her eyes to extend her consciousness up to an area around her with a fifty foot radius, allowing her to feel through roots or critters. This will allow her to feel things like vibrations detected in the earth by plant roots, harmful gaseous substances being filtered through flora, in addition to being able to see through the eyes of critters (only one creature at a time), hear through their ears, or smell with their noses (only works on npcs unless a pc allows her entry). Using this method can even allow her to detect intentionally magically hidden harmful substances, movements, etc that wouldn’t normally be detected by base nature assuming the cloaking spells are lesser rank. If a sentient critter lesser than the caster’s rank is within this spell’s radius, focusing on their mind and using their senses to gather information for a whole rotation can allow her temporary control over the creature as though projecting her consciousness into their body, if they leave the fifty foot limit, are killed/destroyed, or remain under her control for more than four rotations she’ll lose them and be forced to start the entire process over. The ability of control is confined to smaller and more harmless animals (venomous snakes are fine but massive beasts such as cockatrices or dragons are off limits).
 <br><br>
-<img align="right" style="height:70%;" src="https://i.pinimg.com/564x/9b/9e/31/9b9e31e933db072fcc3723c22f5b365e.jpg"/>
 <b>Bloodflower Birth; How to be a Bloodmother for Dummies</b><br>
 A spell that literally creates a specific kind of creature for Jinny to control, which she has affectionately named "the Bloodflower." Sentient beings--about as sentient as typical house pets like dogs or cats--whose humanoid bodies are completely made of plant fibers that can come in various shades of green, with massive heads that seem to be giant red or pink rosebuds. At their tallest, they stand no higher than four feet, but their heavy muscle tone and thick flesh causes them to weigh two hundred pounds at the least, and two-hundred-fifty at the most. Rather than fingers or toes they possess sharp hard thorn-like growths shaped into claws, naturally as tough and durable as Diamond. From their elbows, knees, and even down their spines, actual thorns of the same durability grow from their plant flesh. Each individual claw is about eight inches long and two inches thick, while each individual thorn is roughly five inches long and half one inch thick. 
 <br>
@@ -386,7 +849,6 @@ In addition, the parasites within the acid may survive outside of the blood for 
 <br>
 Jinny can only create up to four of these beings at one time, and are designed to be ticking time bombs. They can only be active for seven posts at the most, before they spontaneously combust into their own explosions of force, blood, and body parts. Each explosion can cover a fifteen-foot radius, and the force of the blast is strong enough to shatter Tungsten at its epicenter, and Titanium at its edges. Six rotations of cool-down are required after reaching the limit of four beasts at once, before another can be made. 
 <br><br>
-<img align="left" style="height:70%;" src="https://i.pinimg.com/564x/a2/e4/93/a2e493be10d591a86d99957b6f92b5ce.jpg"/>
 <b>Bloodflower Behemoth</b><br>
 While very similar to its Bloodflower brethren, the Behemoth still differs in its own unique way, the most obvious being its sheer size. This massive creature stands at a full height of twenty feet, its muscular body naturally scaling in proportion so that its size matches its shape, and causing the thing to weigh nearly a ton! Rather than hands, the upper body limbs of this creature are thorny sharp mandibles that can cut like blades. On its feet, rather than toes, the beast has huge curved thorny claws three feet in length and six inches thick. From its elbows, knees, and down the length of its spine, thorn growths of Diamond protrude from its equally durable flesh, each individual thorn one foot in length and four inches thick.
 <br>
@@ -397,6 +859,9 @@ It absorbs through the pores in its flesh as they do, but its waste leaks out th
 Designed to be a destructive tank with a short life this beast's plant fiber flesh and bones are as durable as Diamond, and its natural strength--thanks to its massive size--is four times that of the average human's (x4), but its natural speed is only three quarters of the average human's (x0.75). This creature has no smarts, and its brain only functions on instinct of movement and instinct of destruction. Its creator is only able suppress its violent tendencies and keep it docile immediately after creation, but once it has been let loose or performs an offensive act, it will continue on a singular path until its time has run out. 
 <br>
 The Behemoth can only be active for up to six rotations before it too erupts into a massive explosion of force that carries its body parts and guts like shrapnel. Like the smaller versions of its kind, the explosion at its epicenter is only durable enough to shatter Tungsten, and then Titanium around its edges, but unlike the smaller versions the explosion has a massive radius of effect of forty feet. Three rotations of cool-down are required before another Behemoth can be created.
+</div>
+<div id="tab12">
+Secondary Magic Tree
 </div>
 
 <embed style="height: 0%; width: 0%;"src="Jinny.mp3" autostart="true" loop="true">
